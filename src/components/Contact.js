@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import emailjs from '@emailjs/browser'; // Make sure you're using the correct package
+import emailjs from '@emailjs/browser';
 import './styles/Contact.css';
 
 function Contact() {
@@ -20,16 +20,16 @@ function Contact() {
     e.preventDefault();
 
     // Send the original email
-    emailjs.send('your_service_id', 'your_template_id', formData, 'your_user_id')
+    emailjs.send('service_qd0jzfc', 'template_6yyits1', formData, 'Ws7brVU9kIBkoezCR')
       .then((response) => {
         console.log('Original message sent successfully:', response);
 
         // Send the auto-reply
-        emailjs.send('your_service_id', 'auto_reply_template_id', {
+        emailjs.send('service_qd0jzfc', 'template_6428q5w', {
           to_email: formData.email, // Use the user's email address
           name: formData.name,
           message: formData.message
-        }, 'your_user_id')
+        }, 'Ws7brVU9kIBkoezCR')
         .then((response) => {
           console.log('Auto-reply sent successfully:', response);
         })
