@@ -25,7 +25,7 @@ function Contact() {
         console.log('Original message sent successfully:', response);
 
         // Send the auto-reply
-        emailjs.send('service_qd0jzfc', 'template_6428q5w', {
+        emailjs.send('service_qd0jzfc', 'template_i92f6uf', {
           to_email: formData.email, // Use the user's email address
           name: formData.name,
           message: formData.message
