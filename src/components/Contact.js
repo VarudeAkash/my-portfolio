@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import emailjs from '@emailjs/browser';
+import emailjs from '@emailjs/browser'; // Make sure you're using the correct package
 import './styles/Contact.css';
 
 function Contact() {
@@ -19,20 +19,34 @@ function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    emailjs.send('service_qd0jzfc', 'template_6yyits1', formData, 'Ws7brVU9kIBkoezCR')
-      .then((result) => {
-          console.log(result.text);
-          alert('Message sent successfully!');
-      }, (error) => {
-          console.log(error.text);
-          alert('An error occurred, please try again.');
-      });
+    // Send the original email
+    emailjs.send('your_service_id', 'your_template_id', formData, 'your_user_id')
+      .then((response) => {
+        console.log('Original message sent successfully:', response);
 
-    setFormData({
-      name: '',
-      email: '',
-      message: ''
-    });
+        // Send the auto-reply
+        emailjs.send('your_service_id', 'auto_reply_template_id', {
+          to_email: formData.email, // Use the user's email address
+          name: formData.name,
+          message: formData.message
+        }, 'your_user_id')
+        .then((response) => {
+          console.log('Auto-reply sent successfully:', response);
+        })
+        .catch((error) => {
+          console.error('Error sending auto-reply:', error);
+        });
+
+        // Clear the form data
+        setFormData({
+          name: '',
+          email: '',
+          message: ''
+        });
+      })
+      .catch((error) => {
+        console.error('Error sending message:', error);
+      });
   };
 
   return (
