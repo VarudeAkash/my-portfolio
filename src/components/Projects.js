@@ -4,53 +4,41 @@ import './styles/Projects.css'; // Import the CSS file for styling
 function Projects() {
   const projectData = [
     {
-      title: 'Project 1',
-      description: 'A brief description of Project 1.',
-      image: '/images/1.jpg',  // Replace with actual image path
-      githubLink: 'https://github.com/yourusername/project1',
+      title: 'Intelligent Exercise Recognition and Counting Band with IMU Sensors',
+      description: 'A brief description of Project 1',
+      image: '../../public/Images/2.png',  // Replace with actual image path
+      githubLink: 'https://github.com/VarudeAkash/CS724-Sensing-Communications-and-Networking-for-Smart-Wireless-Devices/tree/main/Project',
     },
     {
-      title: 'Project 2',
+      title: 'RoBERTa Enhanced MahaHate Classification',
       description: 'A brief description of Project 2.',
-      image: '/images/2.png', // Replace with actual image path
-      githubLink: 'https://github.com/yourusername/project2',
+      image: '/public/Images/2.png', // Replace with actual image path
+      githubLink: 'https://github.com/VarudeAkash/CS689-Computational-Linguistic-for-Indian-Languages/tree/main/Project',
     },
     {
-        title: 'Project 1',
-        description: 'A brief description of Project 1.',
-        image: '/images/1.jpg',  // Replace with actual image path
-        githubLink: 'https://github.com/yourusername/project1',
+        title: 'Audio Aura: Music Data Analysis and Visualization',
+        description: 'A brief description of Project 3.',
+        image: 'Images/1.jpg',  // Replace with actual image path
+        githubLink: 'https://github.com/VarudeAkash/CS661-BIG-DATA-VISUAL-ANALYTICS/tree/main/CS661_Project',
       },
       {
-        title: 'Project 1',
-        description: 'A brief description of Project 1.',
-        image: '/images/1.jpg',  // Replace with actual image path
-        githubLink: 'https://github.com/yourusername/project1',
+        title: 'Advance Explorations in Machine Learning',
+        description: 'A brief description of Project 4.',
+        image: '/Images/1.jpg',  // Replace with actual image path
+        githubLink: 'https://github.com/VarudeAkash/CS771-Introduction-to-Machine-Learning/tree/main/project',
       },
       {
-        title: 'Project 1',
-        description: 'A brief description of Project 1.',
-        image: '/images/1.jpg',  // Replace with actual image path
-        githubLink: 'https://github.com/yourusername/project1',
+        title: 'Image Synthesis using Generative Adverserial Networks',
+        description: 'A brief description of Project 5.',
+        image: '/src/components/Images/1.jpg',  // Replace with actual image path
+        githubLink: 'https://github.com/VarudeAkash/Image-Synthesis-Using-GAN',
       },
       {
-        title: 'Project 1',
+        title: 'Computational Linguistics in Indian Language',
         description: 'A brief description of Project 1.',
         image: '/images/1.jpg',  // Replace with actual image path
-        githubLink: 'https://github.com/yourusername/project1',
-      },
-      {
-        title: 'Project 1',
-        description: 'A brief description of Project 1.',
-        image: '/images/1.jpg',  // Replace with actual image path
-        githubLink: 'https://github.com/yourusername/project1',
-      },
-      {
-        title: 'Project 1',
-        description: 'A brief description of Project 1.',
-        image: '/images/1.jpg',  // Replace with actual image path
-        githubLink: 'https://github.com/yourusername/project1',
-      },
+        githubLink: 'https://github.com/VarudeAkash/CS689--Computational-Linguistic-for-Indian-Languages/tree/main/Projects',
+      }
     // Add more projects here...
   ];
 
