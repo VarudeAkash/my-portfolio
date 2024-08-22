@@ -1,0 +1,45 @@
+/* components/styles/cta.css */
+
+/* Import color variables */
+@import './colors.css';
+
+/* Fancy CTA Link */
+.cta-link {
+  display: inline-block;
+  padding: 12px 24px; /* Space inside the link */
+  font-size: 1.1rem; /* Font size */
+  font-family: 'League Spartan', sans-serif; /* Font family */
+  color: var(--light-text-color); /* Light text color */
+  text-decoration: none; /* Remove underline */
+  border-radius: 30px; /* Rounded corners */
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); /* Gradient background */
+  background-size: 200% 200%; /* Larger background size for animation */
+  transition: background-position 0.5s, transform 0.3s, box-shadow 0.3s; /* Transition effects */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  position: relative; /* Relative positioning for pseudo-element */
+}
+
+.cta-link:hover {
+  background-position: 100% 0; /* Move the gradient */
+  transform: scale(1.05); /* Slight scale effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+/* Add a fancy border or effect if desired */
+.cta-link::before {
+  content: ''; /* Empty content for pseudo-element */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 2px solid var(--primary-color); /* Border color */
+  border-radius: 50%;
+  transition: width 0.3s, height 0.3s; /* Transition effects */
+  transform: translate(-50%, -50%);
+}
+
+.cta-link:hover::before {
+  width: 150%;
+  height: 150%;
+}

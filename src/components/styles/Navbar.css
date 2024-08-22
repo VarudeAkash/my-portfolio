@@ -1,0 +1,62 @@
+/* Import color variables */
+@import './colors.css';
+
+.navbar {
+  background-color: transparent; /* Make navbar transparent */
+  padding: 15px 20px; /* Adjust padding for space around content */
+  position: fixed; /* Fixed position at the top */
+  width: 100%; /* Full width */
+  top: 20px; /* Offset from the top of the viewport */
+  left: 0; /* Align to the left */
+  z-index: 1000; /* Ensure it stays on top of other content */
+  box-sizing: border-box; /* Include padding in the total width */
+  display: flex; /* Flexbox for alignment */
+  justify-content: center; /* Center content horizontally */
+  font-family: 'League Spartan', sans-serif; /* Apply the font */
+  color: var(--text-color); /* Use text color */
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Flexbox for item alignment */
+  justify-content: flex-end; /* Align items to the right */
+  width: 100%; /* Full width to align to the right */
+  flex-wrap: wrap; /* Wrap items if necessary */
+}
+
+.navbar li {
+  margin: 0 15px; /* Space between items */
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--text-color); /* Use text color */
+  font-size: 18px;
+  font-weight: 700; /* Bold weight for better readability */
+  transition: color 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+
+.navbar a:hover {
+  color: var(--accent-color); /* Accent color on hover */
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px;
+    top: 15px; /* Adjust offset for smaller screens */
+  }
+
+  .navbar ul {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .navbar li {
+    margin: 10px 0; /* Space between items in a column */
+  }
+}

@@ -1,0 +1,116 @@
+/* components/styles/home.css */
+
+/* Import League Spartan font in colors.css or home.css */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap');
+
+/* Import color variables */
+@import './colors.css';
+
+.home {
+  background: linear-gradient(to bottom, #000804, #000000); /* Darker gradient background */
+  color: var(--light-text-color); /* Light text color */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  min-height: 100vh; /* Full height of viewport */
+  display: flex; /* Flexbox layout */
+  flex-direction: row; /* Align children horizontally */
+  align-items: center; /* Center-align content vertically */
+  justify-content: center; /* Center-align content horizontally */
+  text-align: center; /* Center-align text */
+  position: relative; /* Position relative for background effects */
+  overflow: hidden; /* Hide overflow for cleaner layout */
+}
+
+.home-content {
+  max-width: 1200px; /* Limit content width */
+  width: 100%; /* Full width */
+  display: flex; /* Flexbox layout for two halves */
+  align-items: center; /* Center-align items vertically */
+  gap: 20px; /* Adjust as needed */
+}
+
+.text-section {
+  flex: 1; /* Take up half of the space */
+  padding-right: 20px; /* Space between text and image */
+  text-align: right; /* Right-align text */
+}
+
+.image-section {
+  flex: 1; /* Take up half of the space */
+}
+
+.intro-text {
+  font-size: 1.5rem; /* Size for "Hi, I'm" */
+  color: var(--light-text-color); /* Text color */
+}
+
+.name {
+  font-size: 3rem; /* Large size for name */
+  font-weight: 700; /* Bold weight */
+  color: var(--primary-color); /* Accent color for name */
+}
+
+.subtext {
+  font-size: 1.5rem; /* Same size as "Hi, I'm" */
+  color: var(--light-text-color); /* Light text color */
+  margin-top: 10px; /* Space above subtext */
+}
+
+.subtext-iiit-kanpur {
+  display: block; /* Ensure it is on a new line */
+  font-size: 2rem; /* Slightly larger size */
+  color: var(--light-text-color); /* Light text color */
+  margin-top: 20px; /* Space above */
+}
+
+.profile-photo {
+  max-width: 50%; /* Responsive photo width */
+  border-radius: 50%; /* Circular photo */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+/* components/styles/Home.css */
+
+/* Other styles... */
+
+/* components/styles/Home.css */
+
+/* Other styles... */
+
+.social-icons {
+    margin-top: 20px; /* Space above icons */
+  }
+  
+  .social-icons a {
+    color: var(--light-text-color); /* Icon color */
+    font-size: 2rem; /* Icon size */
+    margin: 0 10px; /* Space between icons */
+    transition: color 0.3s; /* Smooth color transition */
+  }
+  
+  .social-icons a:hover {
+    color: var(--primary-color); /* Change color on hover */
+  }
+  /* Hire Me Button Styles */
+.hire-me-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px; /* Space above button */
+    font-size: 1.2rem;
+    color: var(--light-text-color);
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0 0 10px var(--primary-color);
+    transition: all 0.3s ease;
+  }
+  
+  .hire-me-button:hover {
+    color: var(--primary-color);
+    background-color: var(--light-text-color);
+    box-shadow: 0 0 20px var(--primary-color);
+  }
+  

@@ -1,0 +1,14 @@
+/* Color variables */
+/* Import League Spartan font in colors.css or home.css */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap');
+
+:root {
+    --background-color: #f0f0f0; /* Light background color for other sections */
+    --text-color: #f1f1f1; /* Dark text color (for light backgrounds) */
+    --primary-color: #13b443; /* Primary color for text and accents */
+    --accent-color: #5cf27f; /* Accent color for buttons */
+    --dark-background: #2c2c2c; /* Dark background color for Home section */
+    --darker-background: #1a1a1a; /* Even darker background color for gradient */
+    --light-text-color: #e0e0e0; /* Lighter text color for dark backgrounds */
+  }
+  

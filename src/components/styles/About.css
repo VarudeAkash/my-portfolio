@@ -1,0 +1,96 @@
+/* components/styles/About.css */
+
+/* Import color variables */
+@import './colors.css';
+
+.about {
+  background-color: var(--dark-background-color); /* Background color */
+  color: var(--light-text-color); /* Text color */
+  padding: 50px 20px; /* Space around content */
+  text-align: center; /* Center-align section heading */
+}
+
+.about-content {
+  max-width: 900px; /* Limit content width */
+  margin: 0 auto; /* Center-align content */
+}
+
+h2 {
+  font-size: 2.5rem; /* Size for section heading */
+  color: var(--primary-color); /* Accent color */
+  margin-bottom: 40px; /* Space below heading */
+}
+
+.timeline {
+  position: relative;
+  margin: 0 auto; /* Center-align timeline */
+  padding: 20px 0;
+  max-width: 800px; /* Limit width */
+}
+
+.timeline:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background-color: var(--light-text-color); /* Line color */
+  transform: translateX(-50%); /* Center the line */
+}
+
+.timeline-item {
+  position: relative;
+  width: 100%; /* Full width for items */
+  margin: 30px 0; /* Margin for spacing */
+  display: flex; /* Flexbox for alignment */
+  align-items: center; /* Center-align items vertically */
+}
+
+.timeline-item:before {
+  content: '';
+  position: absolute;
+  left: 50%; /* Center the dot on the vertical line */
+  width: 12px; /* Dot size */
+  height: 12px; /* Dot size */
+  background-color: var(--primary-color); /* Dot color */
+  border-radius: 50%;
+  transform: translateX(-50%); /* Center the dot horizontally */
+}
+
+.timeline-item-content {
+  position: relative;
+  width: calc(50% - 60px); /* Adjust width to ensure no overlap */
+  padding: 0; /* Space around content */
+  background-color: var(--dark-background-color); /* Background color for content */
+  border-radius: 5px;
+  color: var(--light-text-color); /* Text color */
+  box-sizing: border-box; /* Include padding in width calculation */
+  text-align: left; /* Align text to the left within the box */
+}
+.timeline-item-content h3 {
+    color: var(--primary-color); /* Set the year to primary color */
+  }
+  
+.timeline-item:nth-child(even) {
+  flex-direction: row; /* Default direction for even items */
+}
+
+.timeline-item:nth-child(odd) {
+  flex-direction: row-reverse; /* Reverse direction for odd items */
+}
+
+.timeline-item:nth-child(even) .timeline-item-content {
+  margin-left: 10px; /* Space from vertical line for even items */
+}
+
+.timeline-item:nth-child(odd) .timeline-item-content {
+  margin-right: 10px; /* Increased space from vertical line for odd items */
+}
+
+.timeline-year {
+  font-size: 1.2rem; /* Size for years */
+  color: var(--primary-color); /* Accent color */
+  font-weight: 700; /* Bold weight */
+  text-align: right; /* Align text to the right for consistency */
+}
