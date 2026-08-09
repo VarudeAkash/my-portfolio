@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/my-portfolio/static/css/main.3c99fee7.css",
-    "main.js": "/my-portfolio/static/js/main.f9d54c71.js",
+    "main.css": "/my-portfolio/static/css/main.59c4de83.css",
+    "main.js": "/my-portfolio/static/js/main.61ed27a4.js",
     "static/js/453.acca0757.chunk.js": "/my-portfolio/static/js/453.acca0757.chunk.js",
     "static/media/2.png": "/my-portfolio/static/media/2.fdac6b24ddad79759818.png",
     "static/media/iitk-logo.png": "/my-portfolio/static/media/iitk-logo.c73cae767e26118d74fa.png",
     "static/media/photo.jpeg": "/my-portfolio/static/media/photo.cb8ddc1ec66e97e831c0.jpeg",
     "static/media/1.jpg": "/my-portfolio/static/media/1.a38a1ef29ef26ce7c3f4.jpg",
     "index.html": "/my-portfolio/index.html",
-    "main.3c99fee7.css.map": "/my-portfolio/static/css/main.3c99fee7.css.map",
-    "main.f9d54c71.js.map": "/my-portfolio/static/js/main.f9d54c71.js.map",
+    "main.59c4de83.css.map": "/my-portfolio/static/css/main.59c4de83.css.map",
+    "main.61ed27a4.js.map": "/my-portfolio/static/js/main.61ed27a4.js.map",
     "453.acca0757.chunk.js.map": "/my-portfolio/static/js/453.acca0757.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3c99fee7.css",
-    "static/js/main.f9d54c71.js"
+    "static/css/main.59c4de83.css",
+    "static/js/main.61ed27a4.js"
   ]
 }
