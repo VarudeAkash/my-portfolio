@@ -1,0 +1,136 @@
+@import './colors.css';
+
+.skills-section {
+  background: #ebe5d8;
+  color: var(--ink);
+  padding: 92px 28px;
+}
+
+.skills-content {
+  margin: 0 auto;
+  max-width: 1120px;
+}
+
+.skills-layout {
+  display: grid;
+  gap: 56px;
+  grid-template-columns: 1.05fr 0.95fr;
+}
+
+.skill-rows {
+  display: grid;
+  gap: 26px;
+}
+
+.skill-row {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 24px;
+  text-align: left;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.skill-row:hover {
+  border-color: rgba(31, 122, 92, 0.3);
+  transform: translateX(8px);
+}
+
+.skill-row-top {
+  align-items: baseline;
+  display: flex;
+  gap: 18px;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.skill-row h3 {
+  color: var(--ink);
+  font-size: 1.14rem;
+  margin: 0;
+}
+
+.skill-row-top span {
+  color: var(--green);
+  font-weight: 850;
+}
+
+.skill-bar {
+  background: rgba(23, 23, 23, 0.08);
+  border-radius: 999px;
+  height: 5px;
+  overflow: hidden;
+}
+
+.skill-bar div {
+  background: linear-gradient(90deg, var(--green), var(--amber));
+  border-radius: inherit;
+  height: 100%;
+  transform-origin: left;
+  transition: filter 0.25s ease, transform 0.25s ease;
+}
+
+.skill-row:hover .skill-bar div {
+  filter: saturate(1.2);
+  transform: scaleX(1.02);
+}
+
+.skill-row p {
+  color: var(--muted);
+  font-size: 0.96rem;
+  line-height: 1.6;
+  margin: 12px 0 0;
+}
+
+.courses-card {
+  background: transparent;
+  border-left: 1px solid var(--line);
+  padding-left: 34px;
+  text-align: left;
+}
+
+.courses-card h3 {
+  color: var(--ink);
+  font-size: 1.35rem;
+  margin: 0 0 18px;
+}
+
+.course-list {
+  display: grid;
+  gap: 11px;
+}
+
+.course-list span {
+  color: var(--muted);
+  font-size: 0.96rem;
+  line-height: 1.35;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.course-list span:hover {
+  color: var(--ink);
+  transform: translateX(5px);
+}
+
+.course-list span::before {
+  color: var(--green);
+  content: '•';
+  font-weight: 900;
+  margin-right: 9px;
+}
+
+@media (max-width: 900px) {
+  .skills-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .courses-card {
+    border-left: 0;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .skills-section {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}

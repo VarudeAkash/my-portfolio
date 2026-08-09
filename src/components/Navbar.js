@@ -1,22 +1,37 @@
 import React from 'react';
-import { Link } from 'react-scroll';
 import './styles/Navbar.css'; // Ensure this path is correct
 
 function Navbar() {
+  const scrollToSection = (sectionId) => {
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <nav className="navbar">
       <ul>
         <li>
-          <Link to="home" smooth={true} duration={500}>Home</Link>
+          <button type="button" onClick={() => scrollToSection('home')}>Home</button>
         </li>
         <li>
-          <Link to="about" smooth={true} duration={500}>About</Link>
+          <button type="button" onClick={() => scrollToSection('experience')}>Experience</button>
         </li>
         <li>
-          <Link to="projects" smooth={true} duration={500}>Projects</Link>
+          <button type="button" onClick={() => scrollToSection('research')}>Research</button>
         </li>
         <li>
-          <Link to="contact" smooth={true} duration={500}>Contact</Link>
+          <button type="button" onClick={() => scrollToSection('skills')}>Skills</button>
+        </li>
+        <li>
+          <button type="button" onClick={() => scrollToSection('about')}>About</button>
+        </li>
+        <li>
+          <button type="button" onClick={() => scrollToSection('projects')}>Projects</button>
+        </li>
+        <li>
+          <button type="button" onClick={() => scrollToSection('accolades')}>More</button>
+        </li>
+        <li>
+          <button type="button" onClick={() => scrollToSection('contact')}>Contact</button>
         </li>
       </ul>
     </nav>

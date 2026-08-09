@@ -1,0 +1,106 @@
+@import './colors.css';
+
+.accolades-section {
+  background: var(--paper);
+  color: var(--ink);
+  padding: 92px 28px;
+}
+
+.accolades-content {
+  margin: 0 auto;
+  max-width: 1120px;
+}
+
+.accolades-grid {
+  display: grid;
+  gap: 0 56px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.accolade-card {
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 46px minmax(0, 1fr);
+  padding: 28px 0;
+  text-align: left;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+  width: 100%;
+}
+
+.accolade-card:hover {
+  border-color: rgba(31, 122, 92, 0.28);
+  transform: translateY(-4px);
+}
+
+.accolade-icon {
+  align-items: center;
+  background: var(--deep);
+  border-radius: 16px;
+  color: var(--paper);
+  display: inline-flex;
+  height: 46px;
+  justify-content: center;
+  transition: background 0.25s ease, transform 0.25s ease;
+  width: 46px;
+}
+
+.accolade-card:hover .accolade-icon {
+  background: var(--green);
+  transform: rotate(-4deg) scale(1.04);
+}
+
+.accolade-card h3 {
+  color: var(--ink);
+  font-size: 1.22rem;
+  margin: 0 0 12px;
+}
+
+.accolade-body {
+  min-width: 0;
+}
+
+.accolade-card ul {
+  color: var(--muted);
+  line-height: 1.55;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.accolade-card li {
+  margin: 10px 0;
+  padding-left: 18px;
+  position: relative;
+}
+
+.accolade-card li::before {
+  color: var(--green);
+  content: '•';
+  font-weight: 900;
+  left: 0;
+  position: absolute;
+}
+
+.accolade-card a {
+  color: var(--green);
+  font-weight: 750;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  transition: color 0.2s ease;
+}
+
+.accolade-card a:hover {
+  color: var(--blue);
+}
+
+@media (max-width: 760px) {
+  .accolades-section {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .accolades-grid {
+    grid-template-columns: 1fr;
+  }
+}

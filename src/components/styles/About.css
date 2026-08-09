@@ -1,96 +1,72 @@
-/* components/styles/About.css */
-
-/* Import color variables */
 @import './colors.css';
 
 .about {
-  background-color: var(--dark-background-color); /* Background color */
-  color: var(--light-text-color); /* Text color */
-  padding: 50px 20px; /* Space around content */
-  text-align: center; /* Center-align section heading */
+  background: var(--paper);
+  color: var(--ink);
+  padding: 92px 28px 78px;
 }
 
 .about-content {
-  max-width: 900px; /* Limit content width */
-  margin: 0 auto; /* Center-align content */
-}
-
-h2 {
-  font-size: 2.5rem; /* Size for section heading */
-  color: var(--primary-color); /* Accent color */
-  margin-bottom: 40px; /* Space below heading */
+  margin: 0 auto;
+  max-width: 1080px;
 }
 
 .timeline {
-  position: relative;
-  margin: 0 auto; /* Center-align timeline */
-  padding: 20px 0;
-  max-width: 800px; /* Limit width */
+  border-top: 1px solid var(--line);
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  padding-top: 26px;
 }
 
-.timeline:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 2px;
-  height: 100%;
-  background-color: var(--light-text-color); /* Line color */
-  transform: translateX(-50%); /* Center the line */
+.timeline-dot,
+.timeline:before,
+.timeline-item:before {
+  display: none;
 }
 
 .timeline-item {
+  flex: 1 0 185px;
+  min-width: 185px;
+  padding-right: 24px;
   position: relative;
-  width: 100%; /* Full width for items */
-  margin: 30px 0; /* Margin for spacing */
-  display: flex; /* Flexbox for alignment */
-  align-items: center; /* Center-align items vertically */
+  transition: transform 0.25s ease;
 }
 
-.timeline-item:before {
-  content: '';
-  position: absolute;
-  left: 50%; /* Center the dot on the vertical line */
-  width: 12px; /* Dot size */
-  height: 12px; /* Dot size */
-  background-color: var(--primary-color); /* Dot color */
-  border-radius: 50%;
-  transform: translateX(-50%); /* Center the dot horizontally */
+.timeline-item:hover {
+  transform: translateY(-5px);
 }
 
 .timeline-item-content {
-  position: relative;
-  width: calc(50% - 60px); /* Adjust width to ensure no overlap */
-  padding: 0; /* Space around content */
-  background-color: var(--dark-background-color); /* Background color for content */
-  border-radius: 5px;
-  color: var(--light-text-color); /* Text color */
-  box-sizing: border-box; /* Include padding in width calculation */
-  text-align: left; /* Align text to the left within the box */
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  height: auto;
+  padding: 0;
+  text-align: left;
 }
+
 .timeline-item-content h3 {
-    color: var(--primary-color); /* Set the year to primary color */
+  color: var(--green);
+  font-size: 1.05rem;
+  margin: 0 0 12px;
+  transition: color 0.25s ease;
+}
+
+.timeline-item:hover h3 {
+  color: var(--blue);
+}
+
+.timeline-item-content p {
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.52;
+  margin: 8px 0;
+}
+
+@media (max-width: 560px) {
+  .about {
+    padding-left: 18px;
+    padding-right: 18px;
   }
-  
-.timeline-item:nth-child(even) {
-  flex-direction: row; /* Default direction for even items */
-}
-
-.timeline-item:nth-child(odd) {
-  flex-direction: row-reverse; /* Reverse direction for odd items */
-}
-
-.timeline-item:nth-child(even) .timeline-item-content {
-  margin-left: 10px; /* Space from vertical line for even items */
-}
-
-.timeline-item:nth-child(odd) .timeline-item-content {
-  margin-right: 10px; /* Increased space from vertical line for odd items */
-}
-
-.timeline-year {
-  font-size: 1.2rem; /* Size for years */
-  color: var(--primary-color); /* Accent color */
-  font-weight: 700; /* Bold weight */
-  text-align: right; /* Align text to the right for consistency */
 }
