@@ -13,6 +13,41 @@
   text-align: center;
 }
 
+.project-tabs {
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  gap: 8px;
+  margin: 32px auto 0;
+  max-width: 1120px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.project-tabs button {
+  background: transparent;
+  border: 0;
+  border-radius: 999px;
+  color: var(--muted);
+  cursor: pointer;
+  flex: 0 0 auto;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 850;
+  padding: 10px 15px;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.project-tabs button:hover {
+  background: rgba(31, 122, 92, 0.1);
+  color: var(--green);
+  transform: translateY(-2px);
+}
+
+.project-tabs button.active {
+  background: var(--ink);
+  color: var(--paper);
+}
+
 .projects-layout {
   align-items: start;
   display: grid;
@@ -87,12 +122,21 @@
   border-top: 1px solid var(--line);
 }
 
+.project-tab-intro {
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.65;
+  margin: 0;
+  padding: 0 0 24px;
+}
+
 .project-row {
   align-items: start;
   border-bottom: 1px solid var(--line);
   display: grid;
   gap: 22px;
-  grid-template-columns: 42px minmax(0, 1fr) auto;
+  grid-template-columns: 42px minmax(0, 1fr);
   padding: 26px 0;
   position: relative;
   text-align: left;
@@ -156,19 +200,26 @@
   max-width: 560px;
 }
 
-.project-action a {
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin-top: 16px;
+}
+
+.project-links a {
   align-items: center;
   color: var(--green);
   display: inline-flex;
   gap: 6px;
-  font-size: 0.9rem;
+  font-size: 0.86rem;
   font-weight: 850;
+  line-height: 1.25;
   text-decoration: none;
-  white-space: nowrap;
   transition: color 0.25s ease, transform 0.25s ease;
 }
 
-.project-action a:hover {
+.project-links a:hover {
   color: var(--blue);
   transform: translateX(4px);
 }
@@ -208,10 +259,6 @@
 
   .project-row {
     grid-template-columns: 34px 1fr;
-  }
-
-  .project-action {
-    grid-column: 2;
   }
 
   .visual-float {
